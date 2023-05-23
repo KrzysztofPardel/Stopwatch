@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/assets/stopwatch.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geo&family=Kantumruy+Pro:wght@200;300&family=Sue+Ellen+Francisco&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style/reset.scss">
+  <link rel="stylesheet" href="./style/style.scss">
+  <script src="https://kit.fontawesome.com/f992dc5199.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="info">
+      <i class="fa-solid fa-paint-roller"></i>
+      <i class="fa-sharp fa-solid fa-question"></i>
+    </div>
+    <div class="colors">
+      <div class="color first"></div>
+      <div class="color second"></div>
+      <div class="color third"></div>
+      <div class="color fourth"></div>
+      <div class="color fifth"></div>
+    </div>
+    <h1 class="title">Stopwatch</h1>
+    <p class="stopwatch">0.00</p>
+    <p class="time">0.00</p>
+
+
+    <ul class="results">
+    </ul>
+
+    <div class="buttons">
+      <button class="start"><i class="fas fa-play"></i></button>
+      <button class="pause"><i class="fas fa-pause"></i></button>
+      <button class="stop"><i class="fas fa-stop"></i></button>
+      <button class="reset"><i class="fas fa-times"></i></button>
+      <button class="history">History</button>
+    </div>
+  </div>
+  <div class="modal-shadow">
+    <div class="modal">
+      <h3 class="modal-title">Instruction</h3>
+      <p><i class="fas fa-play"></i> - start</p>
+      <p><i class="fas fa-pause"></i> - pause</p>
+      <p><i class="fas fa-stop"></i> - stop</p>
+      <p><i class="fas fa-times"></i> - delete all (including history)</p>
+      <p><strong>History</strong> - see archived results</p>
+      <button class="close">Close</button>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

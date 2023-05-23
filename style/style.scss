@@ -1,0 +1,235 @@
+@import './reset.scss';
+
+:root {
+	--first-color: rgb(250, 20, 6);
+	--second-color: rgb(190, 210, 197);
+	--hover-color: rgb(209, 33, 24);
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: 'Kantumruy Pro', sans-serif;
+	// background-color: #333;
+	background: linear-gradient(grey, white);
+}
+
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 50px;
+	width: 800px;
+	background: radial-gradient(circle, rgba(43, 44, 46, 1) 0%, rgba(25, 25, 25, 1) 93%);
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px black;
+	color: #fff;
+}
+
+.info {
+	position: absolute;
+	top: 6px;
+	right: 14px;
+	padding: 20px;
+	font-size: 24px;
+	color: var(--second-color);
+	cursor: pointer;
+	transition: color 0.3s;
+}
+.fa-paint-roller:hover {
+	color: var(--first-color);
+}
+.fa-question:hover {
+	color: var(--first-color);
+}
+
+.title {
+	margin-bottom: 20px;
+	font-size: 60px;
+	font-weight: lighter;
+}
+
+.stopwatch {
+	font-size: 72px;
+	color: var(--first-color);
+}
+
+.time {
+	visibility: hidden;
+	color: var(--second-color);
+	font-size: 22px;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 30px;
+	button {
+		margin: 10px;
+		padding: 10px 20px;
+		width: 20%;
+		color: #fff;
+		font-size: 22px;
+		background-color: transparent;
+		border: 1px solid var(--first-color);
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		&:hover,
+		&:focus {
+			background-color: var(--first-color);
+			outline: none;
+		}
+	}
+
+	.time-list li {
+		display: flex;
+		justify-content: space-between;
+		width: 300px;
+		font-size: 22px;
+		color: var(--first-color);
+	}
+	.time-list span {
+		font-weight: bold;
+	}
+}
+
+.history {
+	flex-grow: 1;
+	text-transform: uppercase;
+}
+
+.modal-shadow {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	height: 360px;
+	padding: 30px 60px;
+	border-radius: 15px;
+	background-color: rgb(32, 32, 32);
+	color: white;
+	.modal-title {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	p {
+		margin-bottom: 10px;
+		margin-left: 20px;
+		font-size: 20px;
+	}
+	i,
+	strong {
+		color: var(--first-color);
+	}
+	.close {
+		display: block;
+		margin: 40px auto 0;
+		width: 200px;
+		padding: 10px 5px;
+		color: #fff;
+		font-size: large;
+		background-color: #333;
+		transition: background-color 0.3s;
+		:hover {
+			background-color: #111;
+		}
+	}
+}
+
+.modal-animation {
+	animation: show-modal 0.5s;
+	@keyframes show-modal {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+.colors {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	position: absolute;
+	top: 100px;
+	right: 20px;
+	width: 64px;
+	height: 220px;
+	transition: transform 0.3s;
+}
+
+.color {
+	width: 40px;
+	height: 40px;
+	border: 1px solid black;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color, box-shadow, transform;
+	transition-duration: 0.5, 0.5, 0.5;
+}
+
+.show-colors {
+	visibility: hidden;
+	transform: translate(0, 250px);
+}
+
+.first {
+	background-color: rgb(250, 20, 6);
+	box-shadow: 0 0 8px rgb(250, 20, 6);
+	&:hover {
+		background-color: rgb(209, 33, 24);
+		box-shadow: 0 0 8px rgb(250, 20, 6);
+	}
+}
+.second {
+	background-color: rgb(6, 173, 250);
+	box-shadow: 0 0 8px rgb(6, 173, 250);
+	&:hover {
+		background-color: rgb(28, 145, 199);
+		box-shadow: 0 0 8px rgb(6, 173, 250);
+	}
+}
+.third {
+	background-color: rgb(0, 255, 42);
+	box-shadow: 0 0 8px rgb(0, 255, 42);
+	&:hover {
+		background-color: rgb(33, 190, 59);
+		box-shadow: 0 0 8px rgb(0, 255, 42);
+	}
+}
+.fourth {
+	background-color: rgb(238, 234, 29);
+	box-shadow: 0 0 8px rgb(238, 234, 29);
+	&:hover {
+		background-color: rgb(194, 191, 38);
+		box-shadow: 0 0 8px rgb(238, 234, 29);
+	}
+}
+.fifth {
+	background-color: rgb(192, 37, 253);
+	box-shadow: 0 0 8px rgb(192, 37, 253);
+	&:hover {
+		background-color: rgb(132, 28, 173);
+		box-shadow: 0 0 8px rgb(192, 37, 253);
+	}
+}
