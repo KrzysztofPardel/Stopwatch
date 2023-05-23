@@ -4,7 +4,7 @@
 
 #### An elegant stopwatch with a smallan option for customization.
 
-🔎 This app has been deployed and can be visited here: [Form Validator](form-validator-six-rose.vercel.app)
+🔎 This app has been deployed and can be visited here: [Stopwatch](stopwatch-iota-pied.vercel.app)
 
 ---
 
